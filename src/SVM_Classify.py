@@ -33,14 +33,14 @@ def predict_new_samples(samples_path: str, model_path: str) -> None:
     X_new = new_df.drop(columns=['File', 'Class'], errors='ignore')
 
     # Scale data (optional: ideally use the same scaler fitted on training data)
-    scaler = StandardScaler()
-    X_new_scaled = scaler.fit_transform(X_new)
+    #scaler = StandardScaler()
+    #X_new_scaled = scaler.fit_transform(X_new)
 
     # Load trained SVM model
     model = joblib.load(model_path)
 
     # Predict using trained model
-    predictions = model.predict(X_new_scaled)
+    predictions = model.predict(X_new)
 
     # Display results
     print("\nPredictions for new samples:")
