@@ -2,7 +2,6 @@
 
 This project processes raw inertial sensor data, extracts time-domain features, filters them, and classifies the resulting signals using a Support Vector Machine (SVM) model with Leave-One-Out Cross-Validation (LOOCV).
 
-📁 Project Structure
 ├── extractfilesfinal.py        # Extracts TSFEL features from raw sensor data
 ├── Short_features.py           # Filters and selects relevant features
 ├── SVM_Leave_one_out.py        # Trains & evaluates the SVM model
